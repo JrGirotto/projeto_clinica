@@ -66,6 +66,7 @@ class _FindPatientPageState extends State<FindPatientPage>
                         Image.asset('assets/images/logo_vertical.png'),
                         const SizedBox(height: 48),
                         TextFormField(
+                          keyboardType: TextInputType.number,
                           controller: documentEC,
                           inputFormatters: [
                             FilteringTextInputFormatter.digitsOnly,

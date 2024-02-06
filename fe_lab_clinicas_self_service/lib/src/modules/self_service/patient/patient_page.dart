@@ -110,6 +110,7 @@ class _PatientPageState extends State<PatientPage>
                   ),
                   const SizedBox(height: 24),
                   TextFormField(
+                    keyboardType: TextInputType.name,
                     readOnly: !enableForm,
                     controller: nameEC,
                     validator: Validatorless.required('Nome obrigatório'),
@@ -119,6 +120,7 @@ class _PatientPageState extends State<PatientPage>
                   ),
                   const SizedBox(height: 16),
                   TextFormField(
+                    keyboardType: TextInputType.emailAddress,
                     readOnly: !enableForm,
                     controller: emailEC,
                     validator: Validatorless.multiple([
@@ -131,6 +133,7 @@ class _PatientPageState extends State<PatientPage>
                   ),
                   const SizedBox(height: 16),
                   TextFormField(
+                    keyboardType: TextInputType.number,
                     readOnly: !enableForm,
                     controller: phoneEC,
                     validator: Validatorless.required('Telefone obrigatório'),
@@ -144,6 +147,7 @@ class _PatientPageState extends State<PatientPage>
                   ),
                   const SizedBox(height: 16),
                   TextFormField(
+                    keyboardType: TextInputType.number,
                     readOnly: !enableForm,
                     controller: documentEC,
                     validator: Validatorless.required('CPF obrigatório'),
@@ -157,6 +161,7 @@ class _PatientPageState extends State<PatientPage>
                   ),
                   const SizedBox(height: 16),
                   TextFormField(
+                    keyboardType: TextInputType.number,
                     readOnly: !enableForm,
                     controller: cepEC,
                     validator: Validatorless.required('CEP obrigatório'),
