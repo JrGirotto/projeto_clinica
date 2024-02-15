@@ -5,6 +5,8 @@ import 'package:flutter_getit/flutter_getit.dart';
 class LabClinicasApplicationBindingAdm extends ApplicationBindings {
   @override
   List<Bind<Object>> bindings() => [
-        Bind.lazySingleton((i) => RestClient(Env.backendBaseUrl)),
+        Bind.lazySingleton(
+          (i) => RestClient(Env.backendBaseUrl),
+        ),
       ];
 }
