@@ -6,7 +6,7 @@ part 'patient_information_form_model.g.dart';
 @JsonEnum(valueField: 'id')
 enum PatientInformationFormStatus {
   waiting('Waiting'),
-  chackIn('Checked In'),
+  checkIn('Checked In'),
   beingAttended('Being Attended');
 
   final String id;
