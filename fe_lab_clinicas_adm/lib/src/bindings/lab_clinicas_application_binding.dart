@@ -10,7 +10,7 @@ import 'package:flutter_getit/flutter_getit.dart';
 
 import 'package:fe_lab_clinicas_adm/src/core/env.dart';
 
-class LabClinicasApplicationBindingAdm extends ApplicationBindings {
+class LabClinicasApplicationBinding extends ApplicationBindings {
   @override
   List<Bind<Object>> bindings() => [
         Bind.lazySingleton(

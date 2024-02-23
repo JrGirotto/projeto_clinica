@@ -45,7 +45,6 @@ class PatientInformationFormRepositoryImpl
     try {
       await restClient.auth
           .put('/patientInformationForm/$id', data: {'status': status.id});
-
       return Right(unit);
     } on DioException catch (e, s) {
       log('Erro ao atualizar status do Form', error: e, stackTrace: s);
@@ -54,7 +53,7 @@ class PatientInformationFormRepositoryImpl
   }
 
   Future<Map<String, dynamic>> _getPatient(String id) async {
-    final Response(:data) = await restClient.auth.get('/patient/$id');
+    final Response(:data) = await restClient.auth.get('/patients/$id');
     return data;
   }
 }

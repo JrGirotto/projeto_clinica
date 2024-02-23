@@ -17,23 +17,23 @@ enum PatientInformationFormStatus {
 class PatientInformationFormModel {
   PatientInformationFormModel({
     required this.id,
-    required this.patientModel,
+    required this.patient,
     required this.healthInsuranceCard,
     required this.medicalOrders,
     required this.password,
-    required this.dataCreated,
+    required this.dateCreated,
     required this.status,
   });
 
   final String id;
-  final PatientModel patientModel;
+  final PatientModel patient;
   @JsonKey(name: 'health_insurance_card')
   final String healthInsuranceCard;
   @JsonKey(name: 'medical_order')
   final List<String> medicalOrders;
   final String password;
-  @JsonKey(name: 'data_created')
-  final DateTime dataCreated;
+  @JsonKey(name: 'date_created')
+  final DateTime dateCreated;
   final PatientInformationFormStatus status;
 
   factory PatientInformationFormModel.fromJson(Map<String, dynamic> json) =>

@@ -7,10 +7,11 @@ import 'package:fe_lab_clinicas_adm/src/repositories/patient_information_form/pa
 import 'package:fe_lab_clinicas_core/fe_lab_clinicas_core.dart';
 
 class CallNextPatientService {
-  CallNextPatientService(
-      {required this.patientInformationFormRepository,
-      required this.attendantDeskAssignmentRepository,
-      required this.painelRepository});
+  CallNextPatientService({
+    required this.patientInformationFormRepository,
+    required this.attendantDeskAssignmentRepository,
+    required this.painelRepository,
+  });
 
   final PatientInformationFormRepository patientInformationFormRepository;
   final AttendantDeskAssignmentRepository attendantDeskAssignmentRepository;
