@@ -1,20 +1,31 @@
 import 'package:fe_lab_clinicas_adm/src/models/patient_information_form_model.dart';
-import 'package:fe_lab_clinicas_adm/src/services/call_next_patient/call_next_patient_service.dart';
+import 'package:fe_lab_clinicas_adm/src/repositories/patient_information_form/patient_information_form_repository.dart';
+
 import 'package:fe_lab_clinicas_core/fe_lab_clinicas_core.dart';
 import 'package:signals_flutter/signals_flutter.dart';
 
 class CheckinController with MessageStateMixin {
-  final informationForm = signal<PatientInformationFormModel?>(null);
+  CheckinController({
+    required PatientInformationFormRepository patientInformationFormRepository,
+  }) : _patientInformationFormRepository = patientInformationFormRepository;
 
-  Future<void> next() async {
-    /*final result = await _callNextPatientService.execute();
-    switch (result) {
-      case Left():
-        showError('Erro ao chamar Paciente');
-      case Right(value: final form?):
-        informationForm.value = form;
-      case Right():
-        showInfo('Nenhum Paciente aguardando, aproveite seu tempo.');
-  }*/
+  final informationForm = signal<PatientInformationFormModel?>(null);
+  final PatientInformationFormRepository _patientInformationFormRepository;
+  final endProcess = signal(false);
+
+  Future<void> endCheckin() async {
+    if (informationForm() != null) {
+      final result = await _patientInformationFormRepository.updateStatus(
+          informationForm.value!.id,
+          PatientInformationFormStatus.beingAttended);
+      switch (result) {
+        case Left():
+          showError('Erro ao atualizar o status do Formulário');
+        case Right():
+          endProcess.value = true;
+      }
+    } else {
+      showError('Formulário não pode ser nulo!');
+    }
   }
 }
