@@ -14,11 +14,12 @@ class AttendantDeskAssignmentRepositoryImpl
   @override
   Future<Either<RepositoryException, Unit>> startService(int deskNumber) async {
     final result = await _clearDeskByUser();
+
     switch (result) {
-      case Left<RepositoryException, Unit>(value: final exception):
+      case Left(value: final exception):
         return Left(exception);
-      case Right<RepositoryException, Unit>():
-        await restClient.post('/attendantDeskAssignment', data: {
+      case Right():
+        await restClient.auth.post('/attendantDeskAssignment', data: {
           'user_id': '#userAuthRef',
           'desk_number': deskNumber,
           'date_created': DateTime.now().toIso8601String(),

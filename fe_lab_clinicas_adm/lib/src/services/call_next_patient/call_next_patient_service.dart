@@ -31,7 +31,7 @@ class CallNextPatientService {
     }
   }
 
-  Future<Either<RepositoryException, PatientInformationFormModel>> updatePanel(
+  Future<Either<RepositoryException, PatientInformationFormModel?>> updatePanel(
       PatientInformationFormModel form) async {
     final resultDesk =
         await attendantDeskAssignmentRepository.getDeskAssignment();
@@ -42,6 +42,7 @@ class CallNextPatientService {
       case Right(value: final deskNumber):
         final painelResult =
             await painelRepository.callOnPanel(form.password, deskNumber);
+
         switch (painelResult) {
           case Left(value: final exception):
             log(
