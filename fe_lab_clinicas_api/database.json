@@ -15,10 +15,10 @@
 	],
 	"attendantDeskAssignment": [
 		{
-			"id": "5ea9ac90-30ce-1ee0-9f4e-e94a63008d83",
+			"id": "583041f0-48af-1ee0-9081-1bc8ebe18264",
 			"user_id": "21fe6800-6e71-1e8a-bd4b-4973ed9d0005",
-			"desk_number": 90,
-			"date_created": "2024-02-27T16:24:11.056960",
+			"desk_number": 89,
+			"date_created": "2024-02-27T17:07:56.527730",
 			"status": "Available"
 		}
 	],
@@ -84,7 +84,7 @@
 			],
 			"password": "Ivanira",
 			"date_created": "2024-02-06T16:06:45.042577",
-			"status": "Checked In",
+			"status": "Being Attended",
 			"tests": []
 		},
 		{
@@ -110,34 +110,28 @@
 			],
 			"password": "Mara",
 			"date_created": "2024-02-06T16:06:45.042577",
-			"status": "Being Attended",
+			"status": "Checked In",
 			"tests": []
 		}
 	],
 	"painelCheckin": [
 		{
-			"id": "8d6a21b0-d24e-1edf-9f4e-e94a63008d83",
-			"password": "Jr Girotto",
-			"time_called": "2024-02-27T13:31:00.726515",
-			"attendant_desk": 90
-		},
-		{
-			"id": "51ef6cb0-d368-1edf-9f4e-e94a63008d83",
+			"id": "37b49060-48b0-1ee0-9081-1bc8ebe18264",
 			"password": "Ivanira",
-			"time_called": "2024-02-27T13:33:01.767802",
-			"attendant_desk": 12
+			"time_called": "2024-02-27T17:07:56.949606",
+			"attendant_desk": 89
 		},
 		{
-			"id": "de9f6af0-d3a1-1edf-9f4e-e94a63008d83",
+			"id": "a3a8d890-48c3-1ee0-9081-1bc8ebe18264",
 			"password": "Nosvaldo",
-			"time_called": "2024-02-27T13:33:26.482150",
-			"attendant_desk": 12
+			"time_called": "2024-02-27T17:08:05.283162",
+			"attendant_desk": 89
 		},
 		{
-			"id": "23f3cee0-30cf-1ee0-9f4e-e94a63008d83",
+			"id": "231f9f50-48d3-1ee0-9081-1bc8ebe18264",
 			"password": "Mara",
-			"time_called": "2024-02-27T16:24:11.393959",
-			"attendant_desk": 90
+			"time_called": "2024-02-27T17:08:11.938459",
+			"attendant_desk": 89
 		}
 	],
 	"tests": [
