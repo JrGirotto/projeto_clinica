@@ -1,5 +1,5 @@
-import 'package:fe_lab_clinicas_painel/src/login/login_controller.dart';
-import 'package:fe_lab_clinicas_painel/src/login/login_page.dart';
+import 'package:fe_lab_clinicas_painel/src/pages/login/login_controller.dart';
+import 'package:fe_lab_clinicas_painel/src/pages/login/login_page.dart';
 import 'package:fe_lab_clinicas_painel/src/repositories/user/user_repository.dart';
 import 'package:fe_lab_clinicas_painel/src/repositories/user/user_repository_impl.dart';
 import 'package:fe_lab_clinicas_painel/src/services/login/user_login_service.dart';

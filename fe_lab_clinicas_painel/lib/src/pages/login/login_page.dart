@@ -4,7 +4,7 @@ import 'package:flutter_getit/flutter_getit.dart';
 import 'package:signals_flutter/signals_flutter.dart';
 import 'package:validatorless/validatorless.dart';
 
-import 'package:fe_lab_clinicas_painel/src/login/login_controller.dart';
+import 'package:fe_lab_clinicas_painel/src/pages/login/login_controller.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -25,7 +25,7 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
     messageListener(controller);
     effect(() {
       if (controller.logged) {
-        Navigator.of(context).pushReplacementNamed('/home');
+        Navigator.of(context).pushReplacementNamed('/painel');
       }
     });
     super.initState();
